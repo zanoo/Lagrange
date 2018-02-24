@@ -1,5 +1,5 @@
 # Site Build Settings
-repository: zanoo.github.io
+repository: "zanoo/zanoo.github.io"
 
 # Jekyll-paginate-v2 configuration
 #  pagination:
@@ -21,7 +21,7 @@ permalink:           none
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           zanoo's blog
+title:		           "zanoo's blog"
 description:	       'selected adventures in machine learning'
 author:              'zanoo'
 
