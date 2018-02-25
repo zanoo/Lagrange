@@ -29,6 +29,6 @@ author:              'zanoo'
 #feed:
 #  path: rss-feed.xml
 
-# Add Jupyter notebook gem
-gems:
-  - jekyll-jupyter-notebook
+# Add Jupyter notebook gem (doesn't work in Github Pages)
+#gems:
+#  - jekyll-jupyter-notebook

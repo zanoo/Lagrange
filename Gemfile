@@ -28,6 +28,6 @@ gem 'jekyll-paginate'
 gem 'jekyll-sitemap'
 gem 'jekyll-seo-tag'
 
-# Display Jupyter notebooks in Jekyll
-gem "jekyll-jupyter-notebook"
+# Display Jupyter notebooks in Jekyll (doesnt work in Github Pages)
+# gem "jekyll-jupyter-notebook"
 
