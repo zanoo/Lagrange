@@ -29,7 +29,7 @@ In most of these notes, I'll assume that we use what I'm calling a uniform $\eps
 - If there's multiple actions with the same best estimate, we choose uniformly randomly among them.
 
 #### Exercise 2.1
-Under $\epsilon$-greedy action selection, in the case of two actions and $\epsilon=0.5$, the lesser action is selected with probability 0.5.
+Under $\epsilon$-greedy action selection, in the case of two actions and $\epsilon=0.5$, the lesser action is selected with probability $0.5$.
 
 #### Exercise 2.4
 Using the uniform eps-greedy method on a problem with 4 actions, we get the following feedback at each round:
@@ -39,9 +39,10 @@ Using the uniform eps-greedy method on a problem with 4 actions, we get the foll
 4. a=2, r=2
 5. a=3, r=0
 
-After round 1, we have the following estimates: $ 1, 0, 0, 0 $. Thus $a_1$ is the best action.
+And here are our
+At round 1, we took action 1 and got a rewards of one. Therefore, we have the following estimates of the actions' rewards (in order from 1 to 4): $ 1, 0, 0, 0 $. Thus $a_1$ is the best action.
 
-However, at round 2, we choose action 2! Therefore, we must have rolled an $\epsilon$. Our new estimates: $ 1, 1, 0, 0 $.
+However, at round 2, we choose action 2, despite the fact that the best action is action 1! Therefore, we must have rolled an $\epsilon$. Our new estimates: $ 1, 1, 0, 0 $.
 
 On round 3, we choose round 2. We mustn't've rolled an $\epsilon$, as $a_2$ is one of the best actions. New estimates: $ 1, 1.5, 0, 0 $. Notably, $a_2$ is now the best and only best action.
 
@@ -124,7 +125,7 @@ for i in range(1,10):
 print(exp_vals / 9)
 ```
 
-**Aside:** It's fascinating to note that we can actually derive not only the distribution of the maximum of a set of normal samples, but the distribution of the maximum of a set of random variables distributed according to *any* distribution (as long as the samples are iid, and the maximum converges--e.g. no infinite variances!). This is due to the Fisher–Tippett–Gnedenko theorem. So, theoretically, we could get the entire distribution even if the rewards were distributed according to an exponential distribution. Another interesting thing to note is that we can do more than just point estimates if we know the whole distribution. So this is interesting!
+**Aside:** It's fascinating to note that we can actually derive not only the distribution of the maximum of a set of normal samples, but the distribution of the maximum of a set of random variables distributed according to *any* distribution (as long as the samples are iid, and the maximum converges--e.g. that means no infinite variances!). This is due to the Fisher–Tippett–Gnedenko theorem. So, theoretically, we could get the entire distribution even if the rewards were distributed according to an exponential distribution. Another interesting thing to note is that we can do more than just point estimates if we know the whole distribution. So this is interesting!
 
 Putting this together with the earlier result, we have that
 
